@@ -1,0 +1,50 @@
+body{
+    font-family: Impact, Arial, sans-serif;
+    text-align: center;
+    font-size: larger;
+    background-image: url('blizzard.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+ul{
+    list-style-type: none;
+    /*position: absolute; */
+}
+
+.form {
+    background-color: #fff;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.inline {
+    display: inline;
+}
+
+.thing{
+    background-color: lightgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: black;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.new{
+    background-color: lightgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-15%);
+    border: black;
+    border-width: 10px;
+    border-style: solid;
+    /*transform: translate()*/
+}

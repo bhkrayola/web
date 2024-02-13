@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Characters</title>
+</head>
+<h1>Choose Your Champion</h1>
+<body>
+  <ul>
+    <% for (let i = 0; i < characters.length; i++) { %>
+      <li><a href="/<%= characters[i].c_id %>"><%= characters[i].c_name %></a></li>
+    <% } %>
+
+  </ul>
+</body>
+</html>

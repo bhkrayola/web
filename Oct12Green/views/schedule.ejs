@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Schedule</h1>
+    <p>Count: <%= data.count %></p>
+    <p>Next: <%= data.next %></p>
+    <p>Previous: <%= data.previous %></p>
+    <p>Schedule for: <%= data.results[0].date %>, a <%= data.results[0].day_type.name %></p>
+    <ul>
+        <% data.results[0].day_type.blocks.forEach(function(block) { %>
+          <li>
+            Block Order: <%= block.order %><br>
+            Block Name: <%= block.name %><br>
+            Start Time: <%= block.start %><br>
+            End Time: <%= block.end %>
+          </li>
+          <br>
+        <% }); %>
+      </ul>
+</body>
+</html>

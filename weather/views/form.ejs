@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class ="thing">
+    <h1> 7 Day Weather Forecast</h1>
+    <form action="/form_handler" method = 'POST' class="form">
+        <label for="long">Longitude</label>
+        <input type="text" autocomplete="off" name="long" id="long" placeholder="Enter the longitude here"> <br>
+        <label for="lat">Latitude</label>
+        <input type="text" autocomplete="off" name="lat" id="lat" placeholder="Enter the latitude here"> <br>
+        <input type="submit"> 
+    </form>
+
+    <h2>Sample Coordinates:</h2>
+    <ul>
+        <li>Rice University | Longitude: -95.404182, Latitude: 29.717154 &nbsp &nbsp 
+        <form action="/form_handler" method = 'POST' class="inline">
+            <input type="hidden" name="long" id="long" value="-95.404182">
+            <input type="hidden" name="lat" id="lat" value="29.717154">
+            <input type="submit" value="Submit these coordinates"> 
+        </form></li>
+        <li>TJHSST | Longitude: -77.1689, Latitude: 38.8186 &nbsp &nbsp
+        <form action="/form_handler" method = 'POST' class="inline">
+            <input type="hidden" name="long" id="long" value="-77.1689">
+            <input type="hidden" name="lat" id="lat" value="38.8186">
+            <input type="submit" value="Submit these coordinates"> 
+        </form></li> 
+    </ul>
+    <p>The form automatically rounds your coordinates to 4 decimal places.</p>
+</div class="thing">
+</body>
+</html>

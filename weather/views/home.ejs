@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="new">
+    <a href="http://localhost:8080/">Go back</a>
+    <h1>This Week's Weather Forecast</h1>
+    <ul>
+    <%    for(let i=0; i<forecast.length; i++) {     %>
+        <li> 
+            <h2><%= forecast[i].name %></h2> 
+            <p>
+                <%= forecast[i].name %>'s high at is <%= forecast[i].temperature %> <br><br>
+                <%= forecast[i].detailedForecast %>
+            </p>
+        </li>
+        <%    }                                            %>
+    </ul>
+</div class="new">
+</body>
+</html>

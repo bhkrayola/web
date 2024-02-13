@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Characters</title>
+</head>
+<body>
+  <% if (characters && characters.length > 0) { %>
+    <h2>The Character You Selected: <%= characters[0].c_name %></h2>
+    <p>ID: <%= characters[0].c_id %></p>
+    <p>Wit: <%= characters[0].c_wit %></p>
+    <p>Attack: <%= characters[0].c_attack %></p>
+    <p>Strength: <%= characters[0].c_strength %></p>
+    <p>Defense: <%= characters[0].c_defense %></p>
+    <p>Magic: <%= characters[0].c_magic %></p>
+  <% } else { %>
+    <p>No character data available</p>
+  <% } %>
+  
+
+  <form method="GET" action="/update">
+    <% if (characters && characters.length > 0) { %>
+    <input type="hidden" id="id" name="id" value="<%= characters[0].c_id %>">
+    <% } %>
+    <input type="hidden" id="type" name="type" value="1">
+    <label for="wit">New Wit Value:</label>
+    <input type="number" id="val" name="val" placeholder="Enter new wit value">
+    <button type="submit">Update</button>
+  </form>
+<br>
+  <form method="GET" action="/update">
+    <% if (characters && characters.length > 0) { %>
+      <input type="hidden" id="id" name="id" value="<%= characters[0].c_id %>">
+      <% } %>
+    <input type="hidden" id="type" name="type" value="2">
+    <label for="attack">New Attack Value:</label>
+    <input type="number" id="val" name="val" placeholder="Enter new attack value">
+    <button type="submit">Update</button>
+  </form>
+  <br>
+  <form method="GET" action="/update">
+    <% if (characters && characters.length > 0) { %>
+      <input type="hidden" id="id" name="id" value="<%= characters[0].c_id %>">
+      <% } %>
+    <input type="hidden" id="type" name="type" value="3">
+    <label for="strength">New Strength Value:</label>
+    <input type="number" id="val" name="val" placeholder="Enter new strength value">
+    <button type="submit">Update</button>
+  </form>
+<br>
+  <form method="GET" action="/update">
+      <% if (characters && characters.length > 0) { %>
+      <input type="hidden" id="id" name="id" value="<%= characters[0].c_id %>">
+      <% } %>
+    <input type="hidden" id="type" name="type" value="4">
+    <label for="defense">New Defense Value:</label>
+    <input type="number" id="val" name="val" placeholder="Enter new defense value">
+    <button type="submit">Update</button>
+  </form>
+<br>
+  <form method="GET" action="/update">
+    <% if (characters && characters.length > 0) { %>
+      <input type="hidden" id="id" name="id" value="<%= characters[0].c_id %>">
+      <% } %>
+    <input type="hidden" id="type" name="type" value="5">
+    <label for="magic">New Magic Value:</label>
+    <input type="number" id="val" name="val" placeholder="Enter new magic value">
+    <button type="submit">Update</button>
+  </form>
+  <p>
+    <h2>Assigned Equipment </h2>
+    <table>
+      <% for(var i=0; i < assignedEquipment.length; i++) { %>
+         <tr>
+           <td>Equipment # <%= assignedEquipment[i].e_id %> </td>
+           <td>| <%= assignedEquipment[i].e_name %></td>
+         </tr>
+      <% } %>
+      </table>
+    
+  </p>
+
+  <p>
+    <h2>Available Equipment </h2>
+    <table>
+      <% for(var i=0; i < equipment.length; i++) { %>
+         <tr>
+           <td>ID: <%= equipment[i].e_id %> | </td>
+           <td>Name: <%= equipment[i].e_name %></td>
+         </tr>
+      <% } %>
+      </table>
+    
+  </p>
+  <form method="GET" action="/equip">
+    <% if (characters && characters.length > 0) { %>
+      <input type="hidden" id="id" name="id" value="<%= characters[0].c_id %>">
+      <% } %>
+    <label for="equipment">Equip Equipment (by ID):</label>
+    <input type="number" id="eid" name="eid" placeholder="Enter new equipment ID">
+    <button type="submit">Update</button>
+  </form>
+
+  <p>
+    <h2>Assigned Quests</h2>
+    <table>
+      <% for(var i=0; i < assignedQuests.length; i++) { %>
+         <tr>
+           <td>Quest # <%= assignedQuests[i].q_id %></td>
+           <td>| <%= assignedQuests[i].q_name %></td>
+         </tr>
+      <% } %>
+      </table>
+    
+  </p>
+
+  <p>
+    <h2>Available Quests </h2>
+    <table>
+      <% for(var i=0; i < quests.length; i++) { %>
+         <tr>
+           <td>ID: <%= quests[i].q_id %> | </td>
+           <td>Name: <%= quests[i].q_name %></td>
+         </tr>
+      <% } %>
+      </table>
+  </p>
+
+  <form method="GET" action="/quest">
+    <% if (characters && characters.length > 0) { %>
+      <input type="hidden" id="id" name="id" value="<%= characters[0].c_id %>">
+      <% } %>
+    <label for="equipment">Assign Quest (by ID):</label>
+    <input type="number" id="qid" name="qid" placeholder="Enter new quest ID">
+    <button type="submit">Update</button>
+  </form>
+
+
+</body>
+</html>

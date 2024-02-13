@@ -1,0 +1,28 @@
+.playtext {
+	list-style-position: outside;
+	list-style-image: none;
+	list-style-type: none;
+	text-indent: -20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	line-height: 135%;
+}
+.playtextsmall {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	color: black;
+}
+ul {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.75em;
+	list-style-position: outside;
+	list-style-type: square;
+}
+.playlinenum-annot {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8px;
+	position: absolute; 
+	/*padding-left: 50px;*/
+	left: 545px; 
+	font-weight: bold;
+}
