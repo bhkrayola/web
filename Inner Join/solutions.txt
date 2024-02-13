@@ -1,0 +1,14 @@
+find largest capacity stadium: 
+SELECT s_name, s_capacity FROM stadiums INNER JOIN teams ON s_id = t_stadium WHERE t_conference = 'NFC' ORDER BY s_capacity DESC LIMIT 1;
+
+Determine the tallest quarterback in the NFC
+SELECT p_last, p_first FROM players INNER JOIN teams ON p_team = t_id WHERE t_conference = 'NFC' AND p_position = 'QB' ORDER BY p_height DESC LIMIT 1;
+
+Determine the shortest kicker in the AFC South
+SELECT p_last, p_first FROM players INNER JOIN teams ON p_team = t_id WHERE t_conference = 'AFC' AND t_division = 'South' AND p_position = 'K' ORDER BY p_height ASC LIMIT 1;
+
+Who are the running backs for the oldest franchise in the NFC north
+SELECT p_last, p_first FROM players INNER JOIN teams ON p_team = t_id WHERE t_founded = (SELECT MIN(t_founded) FROM teams) AND p_position = 'RB' AND t_conference = 'NFC' and t_division = 'North';
+
+What is the oldest stadium in California
+SELECT s_name FROM stadiums WHERE s_year = (SELECT MIN(s_year) FROM stadiums);

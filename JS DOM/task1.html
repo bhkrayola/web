@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, odit. Cupiditate, eaque minus, voluptates quod nam aspernatur reiciendis a architecto culpa maxime enim perferendis facilis esse ipsam quos assumenda et.</p>
+    <br>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem nihil nesciunt eaque tenetur, magnam libero eum? In ut vitae obcaecati iste praesentium qui vero, quam quibusdam autem aliquam recusandae explicabo!</p>
+    <h1 id="task3">Heading</h1>
+    <h1 id="task4">Cool color changes</h1>
+    <h1 id="task5">Task 5</h1>
+    <script>
+        document.getElementById('p1').onclick = foo; //task 1
+        function foo() {
+            let h = document.getElementById('p1')
+            h.style.color = '#FF0000';
+        }
+        document.querySelector('#p2').onclick = foo2; //task 2 
+        function foo2(){
+            let h = document.querySelector('#p2')
+            h.style.backgroundColor = '#FF0000'; 
+        }
+        document.querySelector('#task3').addEventListener("click", foo3); //task 3
+        function foo3(){
+            let h = document.querySelector('#task3')
+            h.style.backgroundColor = 'blue'; 
+        }
+        document.querySelector('#task4').addEventListener("click", foo4); //task 4
+        var status = 1
+        function foo4(){
+            let h = document.querySelector('#task4')
+            if (status == 1){h.style.backgroundColor = 'blue'; status = 2;}
+            else{h.style.backgroundColor = 'red'; status = 1;}
+        }
+        document.querySelector('#task5').addEventListener("click", (ev) => {
+            console.log(document.getElementById('task5').id);
+        }); //task 5
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>task 1</h1>
+        <h1>task 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quis expedita natus velit dicta esse dolorem vero, in iure odio et doloribus voluptates incidunt nobis ex beatae accusamus delectus officia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perspiciatis maiores, corrupti, vero dicta architecto odio fugit odit dolor suscipit voluptas minus tenetur soluta eos eaque. Pariatur blanditiis exercitationem mollitia?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quos voluptatum accusantium sint beatae qui unde, optio, delectus in vel mollitia laudantium quibusdam excepturi recusandae odio ipsam dicta impedit laboriosam.</p>
+    </div>
+    <p id="bla">blablablablablabla</p>
+
+    <script>
+        let h1_all = document.querySelectorAll('h1')
+        h1_all.forEach(foo2)
+
+        let p_all = document.querySelectorAll('p')
+        for (let i=0;i<p_all.length; i++) {
+            p_all[i].onclick = foo;
+        }
+        function foo(){
+            this.style.backgroundColor = 'blue';
+        }
+        function foo2(element){
+            element.style.backgroundColor = 'blue';
+        }
+
+        window.addEventListener("keydown", (ev) => {
+        if(ev.code==='Backspace') document.querySelector('#bla').style.color = 'red'
+        if(ev.code==='Space') document.body.style.backgroundColor = 'orange'
+      });
+      window.addEventListener("keyup", (ev) => {
+        if(ev.code==='Space') document.body.style.backgroundColor = 'white'
+      });
+    </script>
+</body>
+</html>

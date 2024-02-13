@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Characters</title>
+</head>
+<body>
+
+  <ul>
+
+{%  for c in characters                           %}
+  
+    <li><a href="http://127.0.0.1:8080/{{c['c_id']}}">{{ c['c_name'] }}</a></li>
+
+{% endfor                                         %}
+
+  </ul>
+</body>
+</html>
