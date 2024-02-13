@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            color: brown;
+        }
+        .highlight{
+            background-color: yellow;
+        }
+        .fontsize{
+            font-size:xx-large;
+        }
+        /* unvisited link */
+        p a:link {
+        color: red;
+        }
+
+        /* visited link */
+        p a:visited {
+        color: green;
+        }
+
+        /* mouse over link */
+        p a:hover {
+        color: hotpink;
+        }
+
+        /* selected link */
+        p a:active {
+        color: blue;
+        }  
+        
+        .class1 a:link {
+        color: blue;
+        }
+
+        /* visited link */
+        .class1 a:visited {
+        color: hotpink;
+        }
+
+        /* mouse over link */
+        .class1 a:hover {
+        color: green;
+        }
+
+        /* selected link */
+        .class1 p a:active {
+        color: red;
+        }  
+
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <p>
+            My id is div1
+        </p>
+    </div>
+    <div>
+        <p style="text-align: center;">
+            I do not have an id but I am styled with my tag
+        </p>
+    </div>
+    <p>
+        <span id="div1">Task 2</span>
+        sdfiuhasulfhsduahfuisadhfuisafd
+    </p>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi est voluptas atque delectus dolores soluta numquam? Velit, quis. Natus eveniet veniam quidem, dignissimos minima voluptate quas. Perferendis nam quisquam enim.
+        <span class="highlight">This is some highlighted text</span>
+        <span class="fontsize">This is some large text</span>
+    </p>
+
+    <p>
+        <a href="http://google.com">Google</a>
+    </p>
+
+    <p id="class1">
+        <a href="http://google.com">Google</a>
+    </p>
+
+</body>
+</html>

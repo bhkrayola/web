@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <h3>votes</h3>
+  <p id='upvotes'></p>
+  <br>
+  <p id='downvotes'></p>
+  <button type="button" onclick="upvote()">upvote</button>
+  <button type="button" onclick="downvote()">downvote</button>
+
+
+
+  <script>
+    async function upvote() {
+        const response = await fetch('http://127.0.0.1/upvote')
+        const data = await response.json()
+        let counter_span = document.getElementById("upvotes")
+        counter_span.innerHTML = data;
+    }    
+    async function downvote() {
+        const response = await fetch('http://127.0.0.1/downvote')
+        const data = await response.json()
+        let counter_span = document.getElementById("downvotes")
+        counter_span.innerHTML = data;
+    }  
+  </script>
+</body>
+</html>
